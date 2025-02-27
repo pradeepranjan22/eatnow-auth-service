@@ -13,6 +13,8 @@ public class MainRestController {
 
     @Autowired
     TokenService tokenService;
+
+
     @Autowired
     private TokenRepository tokenRepository;
 
@@ -53,7 +55,7 @@ public class MainRestController {
         {
             return ResponseEntity.ok("valid");
         }
-        return ResponseEntity.badRequest().body("invalid");
+        return ResponseEntity.ok("invalid");
     }
 
     @PostMapping("logout")
